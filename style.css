@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  background: linear-gradient(145deg, rgba(26, 60, 169, 0.741), rgba(3, 10, 53, 0));
+}
+
+div {
+  display: flex;
+  border-radius: 1.2rem;  
+  backdrop-filter: blur(500px);
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  appearance: none;
+}
+
+#app {
+  display: grid;
+  justify-items: center; 
+  margin-right: 1.2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+#controls {
+  margin-top: 1.6rem;
+  padding: 2.2rem 4rem;
+  gap: 1.6rem;
+}
+
+#controls button:hover {
+  opacity: 0.4;
+  transform: scale(1.5); 
+}
+
+#controlsMusic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.6rem;
+  padding: 0.7rem;
+}
+
+#controlsMusic button {
+  margin: 0.3rem; 
+  /*background-color: gray;*/
+  border-radius: 1.2rem;
+  /*background-color: rgba(225, 225, 230, 1);*/
+  color: black;
+  width: 9.5rem;
+  height: 10.5rem;
+  backdrop-filter: blur(500px);
+
+}
+
+#controlsMusic button.music-on {
+  background-color: rgba(2, 121, 157, 1); 
+  color: white; 
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 6.4rem;  
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+}
+
+#timer {
+  font-style: normal;
+  line-height: normal;
+  font-size: 12.5rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
+}
